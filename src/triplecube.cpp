@@ -2,8 +2,8 @@
 #include <windows.h>
 #include <cmath>
 #include <chrono>
-#include "cube.h"
-#include "render.h"
+#include "include/cube.h"
+#include "include/render.h"
 
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow)
@@ -47,6 +47,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine,
             DispatchMessage(&msg);
         }
 
+        // Rotate cubes in different axes
         cube.RotateY(0.01 * deltaTime);
         cube2.RotateX(0.01 * deltaTime);
         cube3.RotateY(0.02 * deltaTime);

@@ -1,11 +1,9 @@
-// build command: g++ src/test.cpp -lgdi32
-
 #include <iostream>
 #include <windows.h>
 #include <cmath>
 #include <chrono>
-#include "cube.h"
-#include "render.h"
+#include "include/cube.h"
+#include "include/render.h"
 
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow)
@@ -13,9 +11,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine,
     Render3D canvas;
     Cube cube;
 
-
     cube.Create_Cube(-50.0, -50.0, -50.0, 50.0, 50.0, 50.0);
     double x = 0.0;
+
 
     if (!canvas.Create("3D Rendering", WS_OVERLAPPEDWINDOW))
     {
@@ -43,7 +41,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine,
             TranslateMessage(&msg);
             DispatchMessage(&msg);
         }
-        // Rotate in all axis and zoom
+        // Rotate in all axes and zoom in and out
         cube.RotateX(0.02 * deltaTime);
         cube.RotateY(0.01 * deltaTime);
         cube.RotateZ(0.03 * deltaTime);

@@ -4,8 +4,8 @@
 #include <windows.h>
 #include <cmath>
 #include <chrono>
-#include "cube.h"
-#include "render.h"
+#include "include/cube.h"
+#include "include/render.h"
 
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow)
