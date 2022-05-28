@@ -11,18 +11,11 @@
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow)
 {
     Render3D canvas;
-    Cube     cube;
-    Cube     cube2;
-    Cube     cube3;
+    Cube cube;
+
 
     cube.Create_Cube(-50.0, -50.0, -50.0, 50.0, 50.0, 50.0);
-    // cube.SetCamera(200.0, 0.0);
-    // cube2.Create_Cube(-50.0, -50.0, -50.0, 50.0, 50.0, 50.0);
-    // cube2.SetCamera(-200.0, -75.0);
-    // cube3.Create_Cube(-50.0, -50.0, -50.0, 50.0, 50.0, 50.0);
-    // cube3.SetCamera(-50.0, 120.0);
     double x = 0.0;
-    double y = 0.0;
 
     if (!canvas.Create("3D Rendering", WS_OVERLAPPEDWINDOW))
     {
@@ -50,18 +43,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine,
             TranslateMessage(&msg);
             DispatchMessage(&msg);
         }
+        // Rotate in all axis and zoom
         cube.RotateX(0.02 * deltaTime);
         cube.RotateY(0.01 * deltaTime);
         cube.RotateZ(0.03 * deltaTime);
-        cube.SetCamera(100.0 * cos(x), 100.0 * sin(y));
-        // cube.SetZoom(sin(x) + 1.2);
+        cube.SetZoom(sin(x) + 1.2);
         x += 0.01 * deltaTime;
-        y += 0.01 * deltaTime;
-        // cube2.RotateX(0.01 * deltaTime);
-        // cube3.RotateY(0.02 * deltaTime);
+
         canvas.PushCube(cube.GetPoints2D());
-        // canvas.PushCube(cube2.GetPoints2D());
-        // canvas.PushCube(cube3.GetPoints2D());
         canvas.Update();
     }
     return 0;
