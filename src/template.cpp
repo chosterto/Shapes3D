@@ -39,6 +39,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine,
             DispatchMessage(&msg);
         }
         // SOMETHING GOES HERE!!!
+        // SOMETHING GOES HERE!!!
+        // SOMETHING GOES HERE!!!
+        // SOMETHING GOES HERE!!!
+        // SOMETHING GOES HERE!!!
         canvas.Update();
     }
     return 0;
