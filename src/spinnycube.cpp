@@ -47,10 +47,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine,
         cube.RotateY(0.01 * deltaTime);
         cube.RotateZ(0.03 * deltaTime);
         cube.SetCamera(100.0 * cos(x), 100.0 * sin(y));
+        cube.SetZoom(sin(x) + 1.2);
         x += 0.01 * deltaTime;
         y += 0.01 * deltaTime;
 
-        canvas.PushCube(cube.GetPoints2D());
+        canvas.PushCube2D(cube.GetPoints2D());
         canvas.Update();
     }
     return 0;

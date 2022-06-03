@@ -205,7 +205,7 @@ public:
         InvalidateRect(m_hwnd, NULL, TRUE);
     }
 
-    void PushCube(std::vector<Vector2D> v)
+    void PushCube2D(std::vector<Vector2D> v)
     {
         cubes.push_back(v);
     }

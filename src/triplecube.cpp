@@ -48,13 +48,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine,
         }
 
         // Rotate cubes in different axes
-        cube.RotateY(0.01 * deltaTime);
-        cube2.RotateX(0.01 * deltaTime);
+        cube.RotateZ(0.02 * deltaTime);
+        cube2.RotateX(0.02 * deltaTime);
         cube3.RotateY(0.02 * deltaTime);
 
-        canvas.PushCube(cube.GetPoints2D());
-        canvas.PushCube(cube2.GetPoints2D());
-        canvas.PushCube(cube3.GetPoints2D());
+        canvas.PushCube2D(cube.GetPoints2D());
+        canvas.PushCube2D(cube2.GetPoints2D());
+        canvas.PushCube2D(cube3.GetPoints2D());
 
         canvas.Update();
     }

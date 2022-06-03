@@ -95,7 +95,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine,
 
         cube.SetCamera(x, y);
         cube.SetZoom(mag);
-        canvas.PushCube(cube.GetPoints2D());
+        canvas.PushCube2D(cube.GetPoints2D());
         canvas.Update();
     }
     return 0;
