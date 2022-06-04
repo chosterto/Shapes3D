@@ -4,9 +4,10 @@
 #include <vector>
 #include <cmath>
 #include "vec.h"
-#include "render.h"
 
 #define FOV 90
+#define HEIGHT 600
+#define WIDTH  900
 
 
 class Cube
