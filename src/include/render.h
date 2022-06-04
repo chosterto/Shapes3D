@@ -3,32 +3,10 @@
 #include <iostream>
 #include <vector>
 #include <windows.h>
+#include "vec.h"
 
 #define HEIGHT 600
 #define WIDTH  900
-
-
-struct Vector4D
-{
-    double x;
-    double y;
-    double z;
-    double w;
-};
-
-struct Vector3D 
-{
-    double x;
-    double y;
-    double z;
-
-};
-
-struct Vector2D 
-{
-    double x;
-    double y;
-};
 
 
 template <class DERIVED_TYPE> 

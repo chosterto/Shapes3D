@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include "vec.h"
 #include "render.h"
 
 #define FOV 90
